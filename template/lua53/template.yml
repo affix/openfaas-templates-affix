@@ -1,0 +1,2 @@
+language: lua53
+fprocess: lua5.3 main.lua
