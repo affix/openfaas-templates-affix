@@ -1,14 +1,8 @@
 using Valum;
 using VSGI;
 
-public class App : Router {
-  construct {
-    get("/", handler);
-    post("/", handler);
-
-  }
-
-  public bool handler (Request req, Response res, NextCallback next, Context ctx) {
-    return res.expand_utf8(req.flatten_utf8());
+public class App {
+  public string handle(Request req, Response res) {
+    return req.flatten_utf8();
   }
 }

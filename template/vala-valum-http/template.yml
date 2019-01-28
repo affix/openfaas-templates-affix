@@ -1,0 +1,2 @@
+language: vala-valum-http
+fprocess: ./app

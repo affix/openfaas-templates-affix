@@ -21,6 +21,19 @@ Vala is an object-oriented programming language with a self-hosting compiler tha
 
 Valum is a Web micro-framework entirely written in the Vala programming language.
 
+Only GET/POST methods
+
+```
+$ faas-cli template pull https://github.com/affix/openfaas-templates-affix.git
+$ faas-cli new --lang vala-valum <name>
+```
+
+## Vala Valum framework (HTTP)
+Vala is an object-oriented programming language with a self-hosting compiler that generates C code and uses the GObject system.
+
+Valum is a Web micro-framework entirely written in the Vala programming language.
+
+Allows Customisable routing
 
 ```
 $ faas-cli template pull https://github.com/affix/openfaas-templates-affix.git
