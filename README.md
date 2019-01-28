@@ -15,3 +15,14 @@ Swift is a general-purpose, multi-paradigm, compiled programming language develo
 $ faas-cli template pull https://github.com/affix/openfaas-templates-affix.git
 $ faas-cli new --lang swift <name>
 ```
+
+## Vala Valum framework
+Vala is an object-oriented programming language with a self-hosting compiler that generates C code and uses the GObject system.
+
+Valum is a Web micro-framework entirely written in the Vala programming language.
+
+
+```
+$ faas-cli template pull https://github.com/affix/openfaas-templates-affix.git
+$ faas-cli new --lang vala-valum <name>
+```
