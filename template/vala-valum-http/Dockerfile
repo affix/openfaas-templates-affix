@@ -4,13 +4,24 @@ RUN meson install
 WORKDIR /app
 ADD . .
 
-RUN touch /tmp/.lock
 RUN valac --pkg=valum-0.3 --pkg=gio-2.0 function/*.vala app.vala -o app
 
-RUN adduser app
+RUN useradd app
 RUN chown app:app -R /app
 
-HEALTHCHECK --interval=5s CMD [ -e /tmp/.lock ] || exit 1
+WORKDIR /app
+
+RUN apt-get update && \
+    apt-get -y install wget && \
+    wget https://github.com/openfaas-incubator/of-watchdog/releases/download/0.4.6/of-watchdog -O fwatchdog \
+    && chmod +x fwatchdog \
+    && apt-get remove wget -y
 
 USER app
-CMD ["/app/app"]
+
+
+ENV fprocess="./app"
+ENV mode="http"
+ENV upstream_url="http://127.0.0.1:3003"
+
+CMD ["./fwatchdog"]
