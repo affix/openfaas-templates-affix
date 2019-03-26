@@ -1,4 +1,4 @@
-# OpenFaaS Templates powered by Keiran
+# OpenFaaS Templates powered by Affix
 
 ## Lua 5.3
 Lua is a lightweight, multi-paradigm programming language designed primarily for embedded use in applications. Lua is cross-platform, since the interpreter is written in ANSI C, and has a relatively simple C API
